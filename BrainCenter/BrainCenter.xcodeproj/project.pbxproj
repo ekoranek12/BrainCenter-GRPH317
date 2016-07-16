@@ -14,6 +14,8 @@
 		872F3BEE1D3A7B0B0028600E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 872F3BED1D3A7B0B0028600E /* Assets.xcassets */; };
 		872F3BF11D3A7B0B0028600E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872F3BEF1D3A7B0B0028600E /* LaunchScreen.storyboard */; };
 		872F3BF91D3A7CBD0028600E /* BCStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872F3BF81D3A7CBD0028600E /* BCStyleKit.swift */; };
+		878CB1251D3A829300B1A6EB /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 878CB1231D3A829300B1A6EB /* Nexa Bold.otf */; };
+		878CB1261D3A829300B1A6EB /* Nexa Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 878CB1241D3A829300B1A6EB /* Nexa Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		872F3BF01D3A7B0B0028600E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		872F3BF21D3A7B0B0028600E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		872F3BF81D3A7CBD0028600E /* BCStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCStyleKit.swift; sourceTree = "<group>"; };
+		878CB1231D3A829300B1A6EB /* Nexa Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Bold.otf"; sourceTree = "<group>"; };
+		878CB1241D3A829300B1A6EB /* Nexa Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Light.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +68,20 @@
 				872F3BEA1D3A7B0B0028600E /* Main.storyboard */,
 				872F3BF81D3A7CBD0028600E /* BCStyleKit.swift */,
 				872F3BED1D3A7B0B0028600E /* Assets.xcassets */,
+				878CB1221D3A829300B1A6EB /* fonts */,
 				872F3BEF1D3A7B0B0028600E /* LaunchScreen.storyboard */,
 				872F3BF21D3A7B0B0028600E /* Info.plist */,
 			);
 			path = BrainCenter;
+			sourceTree = "<group>";
+		};
+		878CB1221D3A829300B1A6EB /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				878CB1231D3A829300B1A6EB /* Nexa Bold.otf */,
+				878CB1241D3A829300B1A6EB /* Nexa Light.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878CB1261D3A829300B1A6EB /* Nexa Light.otf in Resources */,
 				872F3BF11D3A7B0B0028600E /* LaunchScreen.storyboard in Resources */,
+				878CB1251D3A829300B1A6EB /* Nexa Bold.otf in Resources */,
 				872F3BEE1D3A7B0B0028600E /* Assets.xcassets in Resources */,
 				872F3BEC1D3A7B0B0028600E /* Main.storyboard in Resources */,
 			);
@@ -296,6 +312,7 @@
 				872F3BF71D3A7B0B0028600E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
