@@ -18,13 +18,9 @@ public class BCStyleKit : NSObject {
 
     private struct Cache {
         static let grapeFruitL: UIColor = UIColor(red: 0.929, green: 0.333, blue: 0.396, alpha: 1.000)
-        static let grapeFruitD: UIColor = UIColor(red: 0.855, green: 0.267, blue: 0.325, alpha: 1.000)
         static let bittersweetL: UIColor = UIColor(red: 0.988, green: 0.431, blue: 0.318, alpha: 1.000)
-        static let bittersweetD: UIColor = UIColor(red: 0.914, green: 0.341, blue: 0.247, alpha: 1.000)
         static let sunflowerL: UIColor = UIColor(red: 1.000, green: 0.808, blue: 0.329, alpha: 1.000)
-        static let sunflowerD: UIColor = UIColor(red: 0.965, green: 0.733, blue: 0.259, alpha: 1.000)
         static let grassL: UIColor = UIColor(red: 0.627, green: 0.831, blue: 0.408, alpha: 1.000)
-        static let grassD: UIColor = UIColor(red: 0.549, green: 0.757, blue: 0.322, alpha: 1.000)
         static let mintL: UIColor = UIColor(red: 0.282, green: 0.812, blue: 0.678, alpha: 1.000)
         static let mintD: UIColor = UIColor(red: 0.216, green: 0.737, blue: 0.608, alpha: 1.000)
         static let aquaL: UIColor = UIColor(red: 0.310, green: 0.757, blue: 0.914, alpha: 1.000)
@@ -50,13 +46,9 @@ public class BCStyleKit : NSObject {
     //// Colors
 
     public class var grapeFruitL: UIColor { return Cache.grapeFruitL }
-    public class var grapeFruitD: UIColor { return Cache.grapeFruitD }
     public class var bittersweetL: UIColor { return Cache.bittersweetL }
-    public class var bittersweetD: UIColor { return Cache.bittersweetD }
     public class var sunflowerL: UIColor { return Cache.sunflowerL }
-    public class var sunflowerD: UIColor { return Cache.sunflowerD }
     public class var grassL: UIColor { return Cache.grassL }
-    public class var grassD: UIColor { return Cache.grassD }
     public class var mintL: UIColor { return Cache.mintL }
     public class var mintD: UIColor { return Cache.mintD }
     public class var aquaL: UIColor { return Cache.aquaL }
@@ -75,6 +67,9 @@ public class BCStyleKit : NSObject {
     //// Drawing Methods
 
     public class func draw_5Elaborated() {
+        //// Color Declarations
+        let sunflowerD = UIColor(red: 0.965, green: 0.733, blue: 0.259, alpha: 1.000)
+        let grassD = UIColor(red: 0.549, green: 0.757, blue: 0.322, alpha: 1.000)
 
         //// Rectangle Drawing
         let rectanglePath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 200, height: 200))
@@ -208,7 +203,7 @@ public class BCStyleKit : NSObject {
         bezier3Path.addCurveToPoint(CGPoint(x: 67.5, y: 162), controlPoint1: CGPoint(x: 60, y: 158.53), controlPoint2: CGPoint(x: 63.36, y: 162))
         bezier3Path.lineCapStyle = .Round;
 
-        BCStyleKit.sunflowerD.setStroke()
+        sunflowerD.setStroke()
         bezier3Path.lineWidth = 2
         bezier3Path.stroke()
 
@@ -532,12 +527,14 @@ public class BCStyleKit : NSObject {
         bezier4Path.addLineToPoint(CGPoint(x: 147.52, y: 147.47))
         bezier4Path.lineCapStyle = .Round;
 
-        BCStyleKit.grassD.setStroke()
+        grassD.setStroke()
         bezier4Path.lineWidth = 2
         bezier4Path.stroke()
     }
 
     public class func draw_15Elaborated() {
+        //// Color Declarations
+        let sunflowerD = UIColor(red: 0.965, green: 0.733, blue: 0.259, alpha: 1.000)
 
         //// Rectangle Drawing
         let rectanglePath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 200, height: 200))
@@ -706,7 +703,7 @@ public class BCStyleKit : NSObject {
         bezier3Path.addCurveToPoint(CGPoint(x: 74.5, y: 162), controlPoint1: CGPoint(x: 67, y: 158.53), controlPoint2: CGPoint(x: 70.36, y: 162))
         bezier3Path.lineCapStyle = .Round;
 
-        BCStyleKit.sunflowerD.setStroke()
+        sunflowerD.setStroke()
         bezier3Path.lineWidth = 2
         bezier3Path.stroke()
     }
@@ -888,6 +885,53 @@ public class BCStyleKit : NSObject {
 
         BCStyleKit.mintL.setFill()
         text2Path.fill()
+    }
+
+    public class func drawGradeControl(grade grade: CGFloat = 1) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Color Declarations
+        let grapeFruitD = UIColor(red: 0.855, green: 0.267, blue: 0.325, alpha: 1.000)
+        let bittersweetD = UIColor(red: 0.914, green: 0.341, blue: 0.247, alpha: 1.000)
+        let sunflowerD = UIColor(red: 0.965, green: 0.733, blue: 0.259, alpha: 1.000)
+        let grassD = UIColor(red: 0.549, green: 0.757, blue: 0.322, alpha: 1.000)
+
+        //// Variable Declarations
+        let sliderValue: CGFloat = 315 * grade
+        let gradeColor = grade < 0.6 ? grapeFruitD : (grade < 0.7 ? bittersweetD : (grade < 0.8 ? sunflowerD : (grade < 0.9 ? grassD : BCStyleKit.mintD)))
+        let letterGrade = grade < 0.6 ? "F" : (grade < 0.7 ? "D" : (grade < 0.8 ? "C" : (grade < 0.9 ? "B" : "A")))
+
+        //// Rectangle Drawing
+
+
+        //// Oval Drawing
+        let ovalPath = UIBezierPath()
+        ovalPath.moveToPoint(CGPoint(x: 16, y: 115))
+        ovalPath.addCurveToPoint(CGPoint(x: 116, y: 15), controlPoint1: CGPoint(x: 16, y: 59.77), controlPoint2: CGPoint(x: 60.77, y: 15))
+        ovalPath.addCurveToPoint(CGPoint(x: 216, y: 115), controlPoint1: CGPoint(x: 171.23, y: 15), controlPoint2: CGPoint(x: 216, y: 59.77))
+        ovalPath.lineCapStyle = .Round;
+
+        gradeColor.setStroke()
+        ovalPath.lineWidth = 20
+        CGContextSaveGState(context)
+        CGContextSetLineDash(context, 0, [sliderValue, 330], 2)
+        ovalPath.stroke()
+        CGContextRestoreGState(context)
+
+
+        //// Text Drawing
+        let textRect = CGRect(x: 59, y: 52, width: 115, height: 78)
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.alignment = .Center
+
+        let textFontAttributes = [NSFontAttributeName: UIFont(name: "NexaBold", size: 80)!, NSForegroundColorAttributeName: UIColor.blackColor(), NSParagraphStyleAttributeName: textStyle]
+
+        let textTextHeight: CGFloat = NSString(string: letterGrade).boundingRectWithSize(CGSize(width: textRect.width, height: CGFloat.infinity), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: textFontAttributes, context: nil).size.height
+        CGContextSaveGState(context)
+        CGContextClipToRect(context, textRect)
+        NSString(string: letterGrade).drawInRect(CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
+        CGContextRestoreGState(context)
     }
 
     //// Generated Images
