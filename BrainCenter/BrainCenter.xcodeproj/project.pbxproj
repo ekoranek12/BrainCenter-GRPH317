@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C13FB911D3AA9A900534812 /* GradeMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13FB901D3AA9A900534812 /* GradeMeter.swift */; };
+		2C13FB931D3AB0C300534812 /* LeftBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13FB921D3AB0C300534812 /* LeftBubble.swift */; };
+		2C13FB951D3AB0CC00534812 /* RightBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13FB941D3AB0CC00534812 /* RightBubble.swift */; };
 		872F3BE51D3A7B0B0028600E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872F3BE41D3A7B0B0028600E /* AppDelegate.swift */; };
 		872F3BE71D3A7B0B0028600E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872F3BE61D3A7B0B0028600E /* FirstViewController.swift */; };
 		872F3BE91D3A7B0B0028600E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872F3BE81D3A7B0B0028600E /* SecondViewController.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		2C13FB901D3AA9A900534812 /* GradeMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeMeter.swift; sourceTree = "<group>"; };
+		2C13FB921D3AB0C300534812 /* LeftBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftBubble.swift; sourceTree = "<group>"; };
+		2C13FB941D3AB0CC00534812 /* RightBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightBubble.swift; sourceTree = "<group>"; };
 		872F3BE11D3A7B0B0028600E /* BrainCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		872F3BE41D3A7B0B0028600E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		872F3BE61D3A7B0B0028600E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				872F3BE61D3A7B0B0028600E /* FirstViewController.swift */,
 				872F3BE81D3A7B0B0028600E /* SecondViewController.swift */,
 				872F3BEA1D3A7B0B0028600E /* Main.storyboard */,
+				2C13FB921D3AB0C300534812 /* LeftBubble.swift */,
+				2C13FB941D3AB0CC00534812 /* RightBubble.swift */,
 				2C13FB901D3AA9A900534812 /* GradeMeter.swift */,
 				872F3BF81D3A7CBD0028600E /* BCStyleKit.swift */,
 				872F3BED1D3A7B0B0028600E /* Assets.xcassets */,
@@ -160,10 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C13FB931D3AB0C300534812 /* LeftBubble.swift in Sources */,
 				872F3BE91D3A7B0B0028600E /* SecondViewController.swift in Sources */,
 				872F3BF91D3A7CBD0028600E /* BCStyleKit.swift in Sources */,
 				2C13FB911D3AA9A900534812 /* GradeMeter.swift in Sources */,
 				872F3BE51D3A7B0B0028600E /* AppDelegate.swift in Sources */,
+				2C13FB951D3AB0CC00534812 /* RightBubble.swift in Sources */,
 				872F3BE71D3A7B0B0028600E /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

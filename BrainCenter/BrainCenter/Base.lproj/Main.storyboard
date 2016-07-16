@@ -801,22 +801,133 @@
             </objects>
             <point key="canvasLocation" x="1562" y="360"/>
         </scene>
-        <!--Messages-->
-        <scene sceneID="LiE-Nr-8ta">
+        <!--Mr. Pie-->
+        <scene sceneID="zCC-Cr-4uL">
             <objects>
-                <viewController id="rCh-mE-bWe" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bWG-uE-lgG"/>
-                        <viewControllerLayoutGuide type="bottom" id="tOD-qM-sTx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3h5-kc-Xbe">
+                <tableViewController id="Xt5-wP-l5I" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KXa-gF-42J">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Messages" id="rVs-2p-CMc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ipv-ap-kmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <sections>
+                            <tableViewSection id="zCU-Us-19L">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KmD-eT-2TH">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KmD-eT-2TH" id="Mlp-hB-tj5">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdb-d5-iXU" customClass="LeftBubble" customModule="BrainCenter" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="3" width="140" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="Lyb-j5-Ebi"/>
+                                                        <constraint firstAttribute="height" constant="70" id="Yoj-9N-tIA"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello there"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Gdb-d5-iXU" secondAttribute="trailing" id="EyP-13-rmA"/>
+                                                <constraint firstItem="Gdb-d5-iXU" firstAttribute="top" secondItem="Mlp-hB-tj5" secondAttribute="top" id="Och-B9-9uZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gdb-d5-iXU" secondAttribute="bottom" id="dXK-Bp-E1V"/>
+                                                <constraint firstItem="Gdb-d5-iXU" firstAttribute="leading" secondItem="Mlp-hB-tj5" secondAttribute="leading" id="nQV-wO-wGf"/>
+                                                <constraint firstItem="Gdb-d5-iXU" firstAttribute="centerY" secondItem="Mlp-hB-tj5" secondAttribute="centerY" id="qib-i9-IuJ"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="EyP-13-rmA"/>
+                                                    <exclude reference="Och-B9-9uZ"/>
+                                                    <exclude reference="dXK-Bp-E1V"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="Ao0-HA-wbM">
+                                        <rect key="frame" x="0.0" y="139" width="600" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ao0-HA-wbM" id="yoe-ba-NbW">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ble-vR-wPv" customClass="RightBubble" customModule="BrainCenter" customModuleProvider="target">
+                                                    <rect key="frame" x="450" y="0.0" width="150" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="RbM-cw-iQU"/>
+                                                        <constraint firstAttribute="width" constant="150" id="tyS-rZ-c7c"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello Mr. Pie"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ble-vR-wPv" secondAttribute="bottom" id="7ra-py-g5H"/>
+                                                <constraint firstItem="ble-vR-wPv" firstAttribute="leading" secondItem="yoe-ba-NbW" secondAttribute="leading" id="A2r-Ny-jAC"/>
+                                                <constraint firstItem="ble-vR-wPv" firstAttribute="centerY" secondItem="yoe-ba-NbW" secondAttribute="centerY" id="aQy-po-ogb"/>
+                                                <constraint firstItem="ble-vR-wPv" firstAttribute="top" secondItem="yoe-ba-NbW" secondAttribute="top" id="aRZ-M8-ZuB"/>
+                                                <constraint firstAttribute="trailing" secondItem="ble-vR-wPv" secondAttribute="trailing" id="yWc-6M-uSD"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="7ra-py-g5H"/>
+                                                    <exclude reference="A2r-Ny-jAC"/>
+                                                    <exclude reference="aRZ-M8-ZuB"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="qgm-Qm-g4W">
+                                        <rect key="frame" x="0.0" y="209" width="600" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgm-Qm-g4W" id="ZXI-iR-1wL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-I2-htr" customClass="RightBubble" customModule="BrainCenter" customModuleProvider="target">
+                                                    <rect key="frame" x="400" y="10" width="200" height="120"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="EF6-A7-Tl5"/>
+                                                        <constraint firstAttribute="height" constant="120" id="Izw-Hf-pd0"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="I have a quick question about this weeks assignment"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="2h1-I2-htr" secondAttribute="trailing" id="IIC-yf-o7v"/>
+                                                <constraint firstItem="2h1-I2-htr" firstAttribute="centerY" secondItem="ZXI-iR-1wL" secondAttribute="centerY" id="bQT-xb-jFj"/>
+                                                <constraint firstItem="2h1-I2-htr" firstAttribute="leading" secondItem="ZXI-iR-1wL" secondAttribute="leading" id="bVN-f4-ckz"/>
+                                                <constraint firstItem="2h1-I2-htr" firstAttribute="top" secondItem="ZXI-iR-1wL" secondAttribute="top" id="eXx-EN-y4B"/>
+                                                <constraint firstAttribute="bottom" secondItem="2h1-I2-htr" secondAttribute="bottom" id="sMG-Gd-hzQ"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="sMG-Gd-hzQ"/>
+                                                    <exclude reference="bVN-f4-ckz"/>
+                                                    <exclude reference="eXx-EN-y4B"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Xt5-wP-l5I" id="GY1-CB-PUt"/>
+                            <outlet property="delegate" destination="Xt5-wP-l5I" id="vTm-Pd-fHB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mr. Pie" id="Bdl-bj-gJ9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pwp-K1-z4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="1060"/>
         </scene>
@@ -855,7 +966,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="rCh-mE-bWe" kind="relationship" relationship="rootViewController" id="CRd-HS-bRV"/>
+                        <segue destination="Xt5-wP-l5I" kind="relationship" relationship="rootViewController" id="Cbj-zV-VHx"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRE-l3-bZg" userLabel="First Responder" sceneMemberID="firstResponder"/>

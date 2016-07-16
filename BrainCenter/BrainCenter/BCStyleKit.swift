@@ -934,6 +934,56 @@ public class BCStyleKit : NSObject {
         CGContextRestoreGState(context)
     }
 
+    public class func drawRightBubble(frame frame: CGRect = CGRect(x: 0, y: 0, width: 178, height: 178), text35: String = "Hello, World!") {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(roundedRect: CGRect(x: frame.minX + 8, y: frame.minY + 8, width: frame.width - 18, height: frame.height - 18), byRoundingCorners: [UIRectCorner.TopLeft, UIRectCorner.TopRight, UIRectCorner.BottomLeft], cornerRadii: CGSize(width: 16, height: 16))
+        rectanglePath.closePath()
+        BCStyleKit.mediumGrayL.setFill()
+        rectanglePath.fill()
+
+
+        //// Text Drawing
+        let textRect = CGRect(x: frame.minX + 20, y: frame.minY + 20, width: frame.width - 40, height: frame.height - 40)
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.alignment = .Left
+
+        let textFontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(UIFont.labelFontSize()), NSForegroundColorAttributeName: UIColor.blackColor(), NSParagraphStyleAttributeName: textStyle]
+
+        let textTextHeight: CGFloat = NSString(string: text35).boundingRectWithSize(CGSize(width: textRect.width, height: CGFloat.infinity), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: textFontAttributes, context: nil).size.height
+        CGContextSaveGState(context)
+        CGContextClipToRect(context, textRect)
+        NSString(string: text35).drawInRect(CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
+        CGContextRestoreGState(context)
+    }
+
+    public class func drawLeftBubble(frame frame: CGRect = CGRect(x: 0, y: 0, width: 178, height: 178), text35: String = "Hello, World!") {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()
+
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(roundedRect: CGRect(x: frame.minX + 8, y: frame.minY + 8, width: frame.width - 18, height: frame.height - 18), byRoundingCorners: [UIRectCorner.TopLeft, UIRectCorner.TopRight, UIRectCorner.BottomRight], cornerRadii: CGSize(width: 16, height: 16))
+        rectanglePath.closePath()
+        BCStyleKit.mintL.setFill()
+        rectanglePath.fill()
+
+
+        //// Text Drawing
+        let textRect = CGRect(x: frame.minX + 20, y: frame.minY + 20, width: frame.width - 40, height: frame.height - 40)
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.alignment = .Left
+
+        let textFontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(UIFont.labelFontSize()), NSForegroundColorAttributeName: UIColor.blackColor(), NSParagraphStyleAttributeName: textStyle]
+
+        let textTextHeight: CGFloat = NSString(string: text35).boundingRectWithSize(CGSize(width: textRect.width, height: CGFloat.infinity), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: textFontAttributes, context: nil).size.height
+        CGContextSaveGState(context)
+        CGContextClipToRect(context, textRect)
+        NSString(string: text35).drawInRect(CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
+        CGContextRestoreGState(context)
+    }
+
     //// Generated Images
 
     public class var imageOf_5Elaborated: UIImage {
